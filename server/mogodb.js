@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/mydb";
+const datasource = require("./config.json").datasource;
 
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(datasource.url, function(err, db) {
     if (err) throw err;
     let dbo = db.db("mydb");
     dbo.createCollection("customers", function(err, res) {

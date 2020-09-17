@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/mydb";
+const datasource = require("./config.json").datasource;
 
 router.get("/:name", (req, res) => {
-    MongoClient.connect(url, function (err, db) {
+    MongoClient.connect(datasource.url, function (err, db) {
         if (err) throw err;
         var dbo = db.db("users");
         dbo.collection("customers").findOne({
@@ -19,7 +19,7 @@ router.get("/:name", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    MongoClient.connect(url, function (err, db) {
+    MongoClient.connect(datasource.url, function (err, db) {
         if (err) throw err;
         var dbo = db.db("users");
         dbo.collection("customers").insertOne({
