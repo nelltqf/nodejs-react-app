@@ -1,3 +1,5 @@
+[![nodejs-react-app](https://circleci.com/gh/nelltqf/nodejs-react-app.svg?style=shield)](https://app.circleci.com/pipelines/github/nelltqf/nodejs-react-app)
+
 # nodejs-react-app
 
 This is a test project to play around NodeJS and React. No meaning intended.
