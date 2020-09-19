@@ -8,7 +8,7 @@ To build:
 `npm install`
 
 To run backend:
-`node server/app.js`
+`node server/src/app.js`
 
 To run frontend:
 `npx webpack`
